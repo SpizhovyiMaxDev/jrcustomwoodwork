@@ -1,21 +1,20 @@
 import styles from "./Project.module.css";
-
-import { useParams } from "react-router";
-import { projects } from "../../data/projects";
-import { generateMedias, generateSrcSet } from "../../utils/helpers";
-
 import Heading from "../../ui/Heading/Heading";
 import Breadcrumbs from "./Breadcrumbs";
 import ErrorMessage from "../../ui/ErrorMessage/ErrorMessage";
 import Description from "./Description";
 import Presentation from "../../ui/Presentation/Presentation";
+import useProjectData from "./useProjectData";
 
 function Project() {
-  const { categoryType, projectId } = useParams();
-  const categoryExists = Boolean(projects[categoryType]);
-  const project = projects[categoryType]?.find(
-    (project) => project.id === projectId
-  );
+  const {
+    categoryExists,
+    project,
+    sizes,
+    imgsSrcSets,
+    projectId,
+    categoryType,
+  } = useProjectData();
 
   if (!categoryExists) {
     return (
@@ -42,17 +41,6 @@ function Project() {
       </div>
     );
   }
-
-  const sizes = generateMedias(project.imgs.sizes);
-  const imgsSrcSets = Array.from({ length: project.imgs.amount }, (_, i) => {
-    const imageIndex = i + 1;
-    return generateSrcSet(
-      project.category,
-      project.id,
-      imageIndex,
-      project.imgs.sizes
-    );
-  });
 
   return (
     <div className={styles.project}>
