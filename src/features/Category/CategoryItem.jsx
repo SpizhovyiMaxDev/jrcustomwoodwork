@@ -1,9 +1,10 @@
 import styles from "./CategoryItem.module.css";
 
+import { generateSrcSet, generateMedias } from "../../utils/helpers";
+
 import Heading from "../../ui/Heading/Heading";
 import Picture from "../../ui/Picture/Picture";
 import ButtonLink from "../../ui/ButtonLink/ButtonLink";
-import { generateSrcSet, generateMedias } from "../../utils/helpers";
 
 function ProjectsItem({ project }) {
   const path = `/categories/${project.category}/${project.id}`;

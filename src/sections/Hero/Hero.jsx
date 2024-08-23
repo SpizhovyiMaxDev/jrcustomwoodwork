@@ -10,7 +10,6 @@ function Hero() {
       <div className="container">
         <div className={styles.heroContainer}>
           <Picture
-            src={"/imgs/sections/hero/hero-1400.webp"}
             srcSet={[
               "/imgs/sections/hero/hero-480.webp 480w",
               "/imgs/sections/hero/hero-768.webp 768w",

@@ -1,42 +1,43 @@
 import styles from "./Project.module.css";
+
+import { useParams } from "react-router";
+import { projects } from "../../data/projects";
+import { generateMedias, generateSrcSet } from "../../utils/helpers";
+
 import Heading from "../../ui/Heading/Heading";
 import Breadcrumbs from "./Breadcrumbs";
 import ErrorMessage from "../../ui/ErrorMessage/ErrorMessage";
 import Description from "./Description";
 import Presentation from "../../ui/Presentation/Presentation";
-import useProjectData from "./useProjectData";
 
 function Project() {
-  const {
-    categoryExists,
-    project,
-    sizes,
-    imgsSrcSets,
-    projectId,
-    categoryType,
-  } = useProjectData();
+  const { categoryType, projectId } = useParams();
+  const categoryExists = Boolean(projects[categoryType]);
+  const project = projects[categoryType]?.find(
+    (project) => project.id === projectId
+  );
+  const sizes = project ? generateMedias(project.imgs.sizes) : [];
+  const imgsSrcSets = project
+    ? Array.from({ length: project.imgs.amount }, (_, i) => {
+        const imageIndex = i + 1;
+        return generateSrcSet(
+          project.category,
+          project.id,
+          imageIndex,
+          project.imgs.sizes
+        );
+      })
+    : [];
 
-  if (!categoryExists) {
+  if (!categoryExists || !project) {
+    const errorMessage = !categoryExists
+      ? `Oops! It looks like the category "${categoryType}" doesn't exist.`
+      : `Project called "${projectId}", doesn't exist`;
+
     return (
       <div className={styles.project}>
         <div className="container">
-          <ErrorMessage
-            message={`Oops! It looks like the category "${categoryType}" doesn't exist.`}
-            path="/categories/all"
-          />
-        </div>
-      </div>
-    );
-  }
-
-  if (!project) {
-    return (
-      <div className={styles.project}>
-        <div className="container">
-          <ErrorMessage
-            message={`Project called "${projectId}", doesn't exist`}
-            path="/categories/all"
-          />
+          <ErrorMessage message={errorMessage} path="/categories/all" />
         </div>
       </div>
     );
