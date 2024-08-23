@@ -12,9 +12,23 @@ import Presentation from "../../ui/Presentation/Presentation";
 
 function Project() {
   const { categoryType, projectId } = useParams();
-  const project = projects[categoryType].find(
+  const isCategoryExist = projects[categoryType];
+  const project = projects[categoryType]?.find(
     (project) => project.id === projectId
   );
+
+  if (!isCategoryExist) {
+    return (
+      <div className={styles.project}>
+        <div className="container">
+          <ErrorMessage
+            message={`Oops! It looks like the category "${categoryType}" doesn't exist.`}
+            path="/categories/all"
+          />
+        </div>
+      </div>
+    );
+  }
 
   if (!project) {
     return (

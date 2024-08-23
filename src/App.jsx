@@ -43,7 +43,11 @@ function App() {
                     path="/categories/:categoryType/:projectId"
                     element={<Project />}
                   />
-                  <Route path="*" element={<PageNotFound />} />
+                  <Route path="not-found" element={<PageNotFound />} />
+                  <Route
+                    path="*"
+                    element={<Navigate replace to="not-found" />}
+                  />
                 </Routes>
               </Suspense>
             </Main>

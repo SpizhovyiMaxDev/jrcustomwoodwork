@@ -1,5 +1,4 @@
 import styles from "./PageNotFound.module.css";
-
 import ButtonLink from "../../ui/ButtonLink/ButtonLink";
 
 function PageNotFound() {
@@ -7,7 +6,7 @@ function PageNotFound() {
     <div className={styles.pageNotFound}>
       <div className="container">
         <p className={`${styles.errorMessage} mb-2`}>
-          ( =^.^=)/ Page Not Found - 404
+          This page could not be found.
         </p>
         <ButtonLink path="/home" type="secondary">
           Back to Home

@@ -1,57 +1,60 @@
 import { useLocation } from "react-router";
+import { useEffect } from "react";
+
+function PageTitleListener({ children }) {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.title = getPageTitle(pathname);
+  }, [pathname]);
+
+  return children;
+}
+
+function getPageTitle(pathname) {
+  if (pathname === "/not-found") {
+    return "J&R Custom Woodwork // 404 Page Not Found";
+  }
+
+  if (pathname.length === 1) {
+    return "J&R Custom Woodwork // Page Not Found";
+  }
+
+  const pathParts = pathname.replaceAll("/", " ").trim().split(" ");
+
+  if (pathParts.length === 2) {
+    return formatCategoryTitle(pathParts.at(-1));
+  }
+
+  if (pathParts.length > 2) {
+    return formatProjectTitle(pathParts.at(-1));
+  }
+
+  return formatTitle(`${formatPageTitle(pathname)}`);
+}
 
 function formatTitle(title) {
   return `J&R Custom Woodwork // ${title}`;
 }
 
-function formatProjectTitle(title) {
-  const titleParts = title.split("-");
-  const lastIndex = titleParts.length - 1;
-
-  return titleParts
-    .reduce((acc, val, index) => {
-      if (index === lastIndex) {
-        return `${acc} #${val}`;
-      } else {
-        return `${acc} ${
-          val.charAt(0).toUpperCase() + val.slice(1).toLowerCase()
-        }`;
-      }
-    }, "")
-    .trim();
+function formatPageTitle(pathname) {
+  return pathname.slice(1)[0].toUpperCase() + pathname.slice(2);
 }
 
-function PageTitleListener({ children }) {
-  const { pathname } = useLocation();
+function formatCategoryTitle(category) {
+  return formatTitle(`${capitalizeFirstLetter(category)} Projects, Kelowna`);
+}
 
-  if (pathname.length === 1) {
-    document.title = "J&R Custom Woodwork // Page Not Found";
-    return children;
-  }
+function formatProjectTitle(projectTitle) {
+  const titleParts = projectTitle.split("-");
+  const formattedParts = titleParts.map((part, index) =>
+    index === titleParts.length - 1 ? `#${part}` : capitalizeFirstLetter(part)
+  );
+  return formatTitle(formattedParts.join(" ").trim());
+}
 
-  const pageTitle = pathname.slice(1);
-  const pathParts = pathname.replaceAll("/", " ").trim().split(" ");
-
-  if (!pathname.includes("categories")) {
-    const formattedTitle = pageTitle[0].toUpperCase() + pageTitle.slice(1);
-    document.title = formatTitle(`${formattedTitle} page`);
-  }
-
-  if (pathParts.length === 2) {
-    const categoryTitle = pathParts.at(-1);
-    document.title = formatTitle(
-      `${
-        categoryTitle.at(0).toUpperCase() + categoryTitle.slice(1)
-      } Projects, Kelowna`
-    );
-  }
-
-  if (pathParts.length > 2) {
-    const projectTitle = pathParts.at(-1);
-    document.title = formatTitle(formatProjectTitle(projectTitle));
-  }
-
-  return children;
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
 export default PageTitleListener;
