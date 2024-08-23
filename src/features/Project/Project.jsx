@@ -12,12 +12,12 @@ import Presentation from "../../ui/Presentation/Presentation";
 
 function Project() {
   const { categoryType, projectId } = useParams();
-  const isCategoryExist = projects[categoryType];
+  const categoryExists = Boolean(projects[categoryType]);
   const project = projects[categoryType]?.find(
     (project) => project.id === projectId
   );
 
-  if (!isCategoryExist) {
+  if (!categoryExists) {
     return (
       <div className={styles.project}>
         <div className="container">
