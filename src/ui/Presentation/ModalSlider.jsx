@@ -34,14 +34,14 @@ function ModalSlider() {
                   <source
                     media={mediaSizes.at(index)}
                     srcSet={srcSet}
-                    key={index}
+                    key={`srcSet-${index}`}
                   ></source>
                 );
               })}
               <img
                 src={srcSets.at(-1)}
                 className={styles.sliderImage}
-                alt={`Project Slider, slide ${index + 1}`}
+                alt={`Modal Slider, slide ${index + 1}`}
               />
             </picture>
           </div>
@@ -56,7 +56,7 @@ function ModalSlider() {
               aria-label="Button prev slide"
               onClick={prevSlide}
             >
-              <svg width="30" height="30px">
+              <svg width="30px" height="30px">
                 <use href="/icons.svg#icon-arrow-left" />
               </svg>
             </button>
@@ -68,7 +68,7 @@ function ModalSlider() {
               aria-label="Button next slide"
               onClick={nextSlide}
             >
-              <svg width="30" height="30px">
+              <svg width="30px" height="30px">
                 <use href="/icons.svg#icon-arrow-right" />
               </svg>
             </button>
