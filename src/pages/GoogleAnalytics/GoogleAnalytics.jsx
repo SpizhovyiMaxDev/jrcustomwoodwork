@@ -5,7 +5,7 @@ function GoogleAnalytics({ children }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.gtag("config", "G-L7BS9NGZ57", {
+    window.gtag("config", "G-G0CMBG4645", {
       page_name: document.title,
       page_path: pathname,
     });
