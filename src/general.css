@@ -1,0 +1,182 @@
+/* --- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+
+  Fonts for the normal text: 16 / 18 / 20 / 24 / 30 ;
+  Fonts for the long text (like a blog post):  20 / 24 / 30 / 36 / 44 
+  Fonts for the headlines:  52 / 62 / 74 / 86 / 98
+  Fonts for the large headlines: 112 / 128 / 144 / 160 / 176 / 192 / 200 
+
+- Font sizes (rem)
+1.0 / 1.2 / 1.4 / 1.6 / 1.8 / 2.0 / 2.4 / 3.0 / 3.6 / 4.4 / 5.2 / 6.2 / 7.4 / 8.6 / 9.8 
+
+- Font Sizes (vw)
+
+  Normal Text: 1.6vw / 1.8vw / 2vw / 2.4vw / 3vw
+  Long Text (Blog Post): 2vw / 2.4vw / 3vw / 3.6vw / 4.4vw
+  Headlines: 5.2vw / 6.2vw / 7.4vw / 8.6vw / 9.8vw
+  Large Headlines: 11.2vw / 12.8vw / 14.4vw / 16vw / 17.6vw / 19.2vw / 20vw
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+--Main Color: #000
+
+- Default Border Radius is 11px
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+Copyright by Max Spizhovyi
+*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus{
+  outline: none;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey:#444;
+  --color-dark-grey: #333;
+  --color-taupe: #8D8080;
+  --color-medium-grey: #939393;
+  --color-light-grey-transparent: #efefef5a;
+  --color-light-grey-alt: #dedede;
+  --color-white-transparent: #ffffffb3;
+  --color-semi-transparent-black: #000000d2;
+
+
+  --line-height-default:1;
+  --line-height-small:1.05;
+  --line-height-medium:1.2;
+  --line-height-paragraph-default:1.6;
+  --line-height-large:1.8;
+}
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  font-size: 1.8rem;
+  line-height: var(--line-height-default);
+}
+
+/* ----------------------------------------------- */
+/* - - - - General Images Styles - - - -  */
+/* ----------------------------------------------- */
+
+img{
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Borders - - - -  */
+/* ----------------------------------------------- */
+
+.rounded--11{
+  border-radius: 11px;
+}
+
+/* ----------------------------------------------- */
+/* - - - - App Reusable Margins - - - -  */
+/* ----------------------------------------------- */
+
+.mb-1{
+  margin-bottom: 1rem;
+}
+
+.mb-2{
+  margin-bottom: 2rem;
+}
+
+.mb-3{
+  margin-bottom: 3rem;
+}
+
+.mb-4{
+  margin-bottom: 4rem;
+}
+
+.mb-5{
+  margin-bottom: 5rem;
+}
+
+.mb-6{
+  margin-bottom: 6rem;
+}
+
+/* ----------------------------------------------- */
+/* - - - - General App Textes - - - -  */
+/* ----------------------------------------------- */
+.title{
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: var(--line-height-large);
+  color:var(--color-dark-grey);
+}
+
+.description{
+  font-size: 1.8rem;
+  color: var(--color-grey);
+  text-align: justify;
+  line-height: var(--line-height-paragraph-default);
+}
+
+.text-center{
+  text-align: center;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Reusable containers - - - -  */
+/* ----------------------------------------------- */
+.container {
+  padding: 0 3.2rem;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Media Queries - - - -  */
+/* ----------------------------------------------- */
+@media (max-width:100em) {
+  .container{
+    max-width: 100rem;
+  }
+}
+
+@media (max-width: 70em){
+  html{
+    font-size: 55%;
+  }
+}
+
+@media (max-width:30rem) {
+   .title{
+    font-size: 2rem;
+   }
+}

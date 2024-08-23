@@ -1,0 +1,7 @@
+.pageNotFound{
+    padding: 3.2rem 0;
+}
+
+.errorMessage{
+    font-size: clamp(2.4rem, 3.6vw, 4.4rem);
+}

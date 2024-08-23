@@ -1,0 +1,22 @@
+.preview{
+    padding: 5.2rem 0;
+    background: var(--color-light-grey-transparent);
+}
+
+/* ----------------------------------------------- */
+/* - - - - Image Aspect Ratio - - - -  */
+/* ----------------------------------------------- */
+
+.aspectRatio{
+    padding-top: 57%;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Media Queries - - - -  */
+/* ----------------------------------------------- */
+
+@media (max-width:48em) {   
+    .aspectRatio{
+        padding-top: 141%;
+    }
+}

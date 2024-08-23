@@ -1,0 +1,29 @@
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.headerContainer{
+    height: 9.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger{
+    color: var(--color-black);
+    border: none;
+    background: inherit;
+    display: none;
+    z-index: 9999;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Media Queries - - - -  */
+/* ----------------------------------------------- */
+
+@media(max-width:48em){
+    .hamburger{
+        display: block;
+    }
+}

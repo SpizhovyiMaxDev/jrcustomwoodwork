@@ -1,0 +1,49 @@
+.footer {
+  background: var(--color-black);
+  padding: 9.8rem 0;
+  text-align: center;
+}
+
+/* ----------------------------------------------- */
+/* - - - -  Footer Textes  - - - - */
+/* ----------------------------------------------- */
+
+.footerHeading {
+  color: var(--color-white);
+}
+
+.footerTextContent {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  line-height: var(--line-height-paragraph-default);
+}
+
+.breakOnSmall{
+  display: none;
+}
+
+/* ----------------------------------------------- */
+/* - - - -  Footer Links  - - - - */
+/* ----------------------------------------------- */
+
+.footerLink:link,
+.footerLink:visited {
+  color: var(--color-medium-grey);
+  padding: 0 0.5rem;
+}
+
+.footerLink:hover,
+.footerLink:focus {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Media Queries - - - -  */
+/* ----------------------------------------------- */
+
+@media (max-width: 30em) { 
+  .breakOnSmall{
+    display: block;
+  }
+}

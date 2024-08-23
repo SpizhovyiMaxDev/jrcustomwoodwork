@@ -1,0 +1,67 @@
+/* ----------------------------------------------- */
+/* - - - -  Primary Button Link  - - - - */
+/* ----------------------------------------------- */
+
+.primary:link,
+.primary:visited {
+  font-size: 2rem;
+  color: var(--color-dark-grey);
+  text-decoration: none;
+  position: relative;
+}
+
+.primary:hover,
+.primary:active {
+  color: var(--color-medium-grey);
+}
+
+.primary::before {
+  content: "";
+  width: 90%;
+  height: 0.2rem;
+  background: var(--color-dark-grey);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.primary:hover::before {
+  background: var(--color-medium-grey);
+}
+
+
+/* ----------------------------------------------- */
+/* - - - -  Secondary Button Link  - - - - */
+/* ----------------------------------------------- */
+
+.secondary:link, 
+.secondary:visited{
+    font-size: 1.8rem;
+    color: var(--color-dark-grey);
+}
+
+.secondary:hover,
+.secondary:active{
+  color: var(--color-medium-grey);
+}
+
+
+/* ----------------------------------------------- */
+/* - - - -  Primary Tertiary Link  - - - - */
+/* ----------------------------------------------- */
+
+.tertiary:link,
+.tertiary:visited{
+  text-decoration: none;
+  color: var(--color-dark-grey);
+}
+
+.tertiary:hover,
+.tertiary:active{
+  text-decoration: underline;
+}
+
+:global(.active).tertiary{
+  text-decoration: underline;
+}

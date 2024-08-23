@@ -1,0 +1,63 @@
+.slider {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliderItem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.6s ease-out, transform 0.8s ease-out;
+}
+
+.sliderImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transform-origin: center; 
+}
+
+
+.sliderBtn {
+    cursor: pointer;
+    display: flex;
+    border: none;
+    opacity: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    background: var(--color-white-transparent);
+}
+
+
+.sliderBtnNext {
+    right: 3%;
+}
+
+.sliderBtnPrev {
+    left: 3%;
+}
+
+
+/* ----------------------------------------------- */
+/* - - - -  States of Slider Buttons  - - - - */
+/* ----------------------------------------------- */
+.sliderBtnHidden{
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.sliderBtnVisible{
+    visibility: visible;
+    pointer-events: auto;
+}

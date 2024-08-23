@@ -1,0 +1,26 @@
+.kitchens{
+    padding: 7.4rem 0;
+}
+
+.kitchensContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:6.4rem;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Image Aspect Ratio - - - -  */
+/* ----------------------------------------------- */
+
+.aspectRatio{
+    padding-top: 143.92%;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Media Queries - - - -  */
+/* ----------------------------------------------- */
+@media (max-width: 42em){
+    .kitchensContainer{
+        grid-template-columns: 1fr;
+    }
+}

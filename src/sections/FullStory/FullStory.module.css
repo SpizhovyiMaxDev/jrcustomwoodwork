@@ -1,0 +1,47 @@
+.fullStory{
+    padding:9.8rem 0;
+}
+
+.fullStoryContainer{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap:9.8rem;
+    row-gap:14.4rem;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Image Aspect Ratio - - - -  */
+/* ----------------------------------------------- */
+
+.aspectRatio{
+    padding-top: 115.125%;
+}
+
+/* ----------------------------------------------- */
+/* - - - - Media Queries - - - -  */
+/* ----------------------------------------------- */
+
+@media (max-width:48em){
+    .aspectRatio{
+        padding-top: 67%;
+    }
+
+    .fullStory{
+        padding:5.2rem 0 8.2rem;
+    }
+
+    .fullStoryContainer{
+        grid-template-columns: 1fr;
+        row-gap:6.2rem;
+    }
+
+    .fullStoryPicture:nth-child(2){
+        grid-row: 1;
+    }
+
+    .fullStoryPicture{
+        transform: translateY(2rem);
+    }
+}

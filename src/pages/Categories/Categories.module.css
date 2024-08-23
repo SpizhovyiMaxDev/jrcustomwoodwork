@@ -1,0 +1,22 @@
+.categories{
+    padding: 5.2rem 0 9.8rem;
+}
+
+.categoriesContainer{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    gap:5.2rem;
+}
+
+@media(max-width:75em){
+    .categories{
+        padding: 2rem 0 5.2rem;
+    }
+}
+
+@media(max-width:64em){
+    .categoriesContainer{
+        grid-template-columns: 1fr;
+        gap:3rem;
+    }
+}

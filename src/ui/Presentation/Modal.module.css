@@ -1,0 +1,54 @@
+.overlay{
+    z-index: 9999;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-semi-transparent-black);
+    -webkit-background: var(--color-semi-transparent-black); 
+    -moz-background: var(--color-semi-transparent-black); 
+}
+
+
+/* ----------------------------------------------- */
+/* - - - -  Modal Styles  - - - - */
+/* ----------------------------------------------- */
+
+.modal {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+.closeModalBtn{
+    z-index: 2;
+    display: flex;
+    color: var(--color-white);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+}
+
+/* ----------------------------------------------- */
+/* - - - -  States of Modal  - - - - */
+/* ----------------------------------------------- */
+.openModal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+.closeModal {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}

@@ -1,0 +1,10 @@
+.contactsListItem{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact{
+    color: var(--grey);
+    word-break: break-all;
+}
