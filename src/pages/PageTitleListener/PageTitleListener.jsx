@@ -30,7 +30,7 @@ function getPageTitle(pathname) {
     return formatProjectTitle(pathParts.at(-1));
   }
 
-  return formatTitle(`${formatPageTitle(pathname)}`);
+  return formatTitle(formatPageTitle(pathname));
 }
 
 function formatTitle(title) {
