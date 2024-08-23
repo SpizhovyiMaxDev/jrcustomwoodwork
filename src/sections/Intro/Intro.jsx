@@ -9,7 +9,6 @@ function Story() {
       <div className="container">
         <div className={styles.introContainer}>
           <Picture
-            src="/imgs/sections/history/intro-1200.webp"
             srcSet={[
               "/imgs/sections/history/intro-480.webp",
               "/imgs/sections/history/intro-768.webp",

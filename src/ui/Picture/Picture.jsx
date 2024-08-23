@@ -25,7 +25,7 @@ function Picture({
       <img
         src={src || srcSet.at(-1)}
         className={styles.coveredImage}
-        loading="eager"
+        loading="lazy"
         alt={alt}
       />
     </picture>
