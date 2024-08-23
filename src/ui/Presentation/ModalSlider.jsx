@@ -1,6 +1,6 @@
 import styles from "./ModalSlider.module.css";
-import Modal from "./Modal";
 import { usePresentation } from "../../contexts/PresentationProvider";
+import Modal from "./Modal";
 
 function ModalSlider() {
   const {
