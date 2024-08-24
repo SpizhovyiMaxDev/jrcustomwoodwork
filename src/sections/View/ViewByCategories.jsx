@@ -23,7 +23,7 @@ function ViewByCategories() {
                 "/imgs/sections/view/wardrobes/1200/kelowna-custom-wardrobe-cabinets-1.webp",
               ]}
               mediaSizes={["(max-width: 480px)", "(max-width:768px)"]}
-              wrapperStyles={`mb-2  ${styles.aspectRatio1}`}
+              wrapperStyles={`mb-2  ${styles.squareAspectRatio}`}
               alt="Kelowna custom wardrobes"
             />
 
@@ -38,7 +38,6 @@ function ViewByCategories() {
 
           <div className={styles.categoriesViewItem}>
             <Picture
-              src="/imgs/sections/view/bathrooms/480/kelowna-custom-bathroom-title-1.webp"
               srcSet={[
                 "/imgs/sections/view/bathrooms/480/kelowna-custom-bathroom-title-1.webp",
                 "/imgs/sections/view/bathrooms/768/kelowna-custom-bathroom-title-1.webp",
@@ -49,7 +48,7 @@ function ViewByCategories() {
                 "(max-width:768px)",
                 "(max-width:1200px)",
               ]}
-              wrapperStyles={`mb-2 ${styles.aspectRatio2}`}
+              wrapperStyles={`mb-2 ${styles.portraitAspectRatio}`}
               alt="Kelowna custom bathrooms"
             />
 

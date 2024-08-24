@@ -8,7 +8,7 @@ import ButtonLink from "../../ui/ButtonLink/ButtonLink";
 
 function ProjectsItem({ project }) {
   const path = `/categories/${project.category}/${project.id}`;
-  const sizes = generateMedias(project.imgs.sizes);
+  const mediaSizes = generateMedias(project.imgs.sizes);
   const imageIndex = 1;
   const srcSet = generateSrcSet(
     project.category,
@@ -21,7 +21,7 @@ function ProjectsItem({ project }) {
     <li>
       <Picture
         srcSet={srcSet}
-        mediaSizes={sizes}
+        mediaSizes={mediaSizes}
         alt={`${project.id}/${project.heading.toLowerCase()}`}
         wrapperStyles={`${styles.aspectRatio} mb-2`}
       />

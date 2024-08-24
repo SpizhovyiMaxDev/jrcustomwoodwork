@@ -16,7 +16,7 @@ function Project() {
   const project = projects[categoryType]?.find(
     (project) => project.id === projectId
   );
-  const sizes = project ? generateMedias(project.imgs.sizes) : [];
+  const mediaSizes = project ? generateMedias(project.imgs.sizes) : [];
   const imgsSrcSets = project
     ? Array.from({ length: project.imgs.amount }, (_, i) => {
         const imageIndex = i + 1;
@@ -51,7 +51,7 @@ function Project() {
         <Presentation
           customStyles={`${styles.aspectRatio} mb-3`}
           imgsSrcSets={imgsSrcSets}
-          mediaSizes={sizes}
+          mediaSizes={mediaSizes}
         />
 
         <Heading type="secondary" className="mb-2">

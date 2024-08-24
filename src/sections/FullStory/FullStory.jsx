@@ -29,7 +29,6 @@ function FullStory() {
           </div>
 
           <Picture
-            src="/imgs/sections/history/fireplace-1400.webp"
             srcSet={[
               "/imgs/sections/history/fireplace-480.webp",
               "/imgs/sections/history/fireplace-768.webp",
@@ -40,14 +39,13 @@ function FullStory() {
               "(max-width: 480px)",
               "(max-width: 768px)",
               "(max-width: 1200px)",
-              "(max-width: 1400px) 1400px",
+              "(max-width: 1400px)",
             ]}
-            alt="Full Story of J&R Custom Woodwork LDT"
+            alt="Story of J&R Custom Woodwork LDT"
             wrapperStyles={`${styles.aspectRatio} ${styles.fullStoryPicture}`}
           />
 
           <Picture
-            src="/imgs/sections/history/philosophy-1400.webp"
             srcSet={[
               "/imgs/sections/history/philosophy-480.webp",
               "/imgs/sections/history/philosophy-768.webp",
@@ -58,7 +56,7 @@ function FullStory() {
               "(max-width: 480xpx)",
               "(max-width: 768px)",
               "(max-width: 1200px)",
-              "(max-width: 1400px) 1400px",
+              "(max-width: 1400px)",
             ]}
             alt="Philosophy of J&R Custom Woodwork LDT"
             wrapperStyles={`${styles.aspectRatio} ${styles.fullStoryPicture}`}

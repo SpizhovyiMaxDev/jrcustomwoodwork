@@ -3,7 +3,7 @@ import Heading from "../../ui/Heading/Heading";
 import Picture from "../../ui/Picture/Picture";
 import ButtonLink from "../../ui/ButtonLink/ButtonLink";
 
-function Story() {
+function Intro() {
   return (
     <section className={styles.intro}>
       <div className="container">
@@ -21,7 +21,7 @@ function Story() {
               "(max-width: 1200px)",
               "(max-width: 1400px)",
             ]}
-            alt="Sotry vibe"
+            alt="Introduction"
             wrapperStyles={`${styles.aspectRatio} rounded--11`}
           />
 
@@ -48,4 +48,4 @@ function Story() {
   );
 }
 
-export default Story;
+export default Intro;
