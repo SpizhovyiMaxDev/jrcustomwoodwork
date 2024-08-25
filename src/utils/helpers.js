@@ -1,6 +1,4 @@
 
-export const generateMedias = sizes => sizes.map(size => `(max-width:${size}px)`);
-
 export function createMediaQueries(sizes) {
   if(!sizes) return [];
   return sizes.map(size => `(max-width: ${size}px)`);

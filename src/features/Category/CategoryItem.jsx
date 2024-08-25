@@ -1,6 +1,6 @@
 import styles from "./CategoryItem.module.css";
 
-import { generateSrcSet, generateMedias } from "../../utils/helpers";
+import { generateSrcSet, createMediaQueries } from "../../utils/helpers";
 
 import Heading from "../../ui/Heading/Heading";
 import Picture from "../../ui/Picture/Picture";
@@ -8,7 +8,7 @@ import ButtonLink from "../../ui/ButtonLink/ButtonLink";
 
 function ProjectsItem({ project }) {
   const path = `/categories/${project.category}/${project.id}`;
-  const mediaSizes = generateMedias(project.imgs.sizes);
+  const mediaQueries = createMediaQueries(project.imgs.sizes);
   const imageIndex = 1;
   const srcSet = generateSrcSet(
     project.category,
@@ -21,7 +21,7 @@ function ProjectsItem({ project }) {
     <li>
       <Picture
         srcSet={srcSet}
-        mediaSizes={mediaSizes}
+        mediaQueries={mediaQueries}
         alt={`${project.id}/${project.heading.toLowerCase()}`}
         wrapperStyles={`${styles.aspectRatio} mb-2`}
       />
@@ -29,6 +29,7 @@ function ProjectsItem({ project }) {
       <Heading type="tertiary" className="mb-1">
         {project.heading}
       </Heading>
+
       <ButtonLink path={path} type="primary">
         View Project
       </ButtonLink>
