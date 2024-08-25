@@ -1,6 +1,6 @@
 import React from "react";
 
-function Description({ description = "", customStyles = "" }) {
+function Description({ description = "" }) {
   const formatedDescripition = description.split(/(#paragraph|#title)/);
   const isDefault = formatedDescripition.length === 1;
 
@@ -9,18 +9,9 @@ function Description({ description = "", customStyles = "" }) {
   }
 
   return (
-    <div className={customStyles}>
+    <blockquote>
       {formatedDescripition.map((section, index) => {
         const content = formatedDescripition.at(index - 1);
-
-        if (section === "#paragraph") {
-          return (
-            <React.Fragment key={`paragraph-${index}`}>
-              <p className="description">{content}</p>
-              <br />
-            </React.Fragment>
-          );
-        }
 
         if (section === "#title") {
           return (
@@ -31,9 +22,18 @@ function Description({ description = "", customStyles = "" }) {
           );
         }
 
+        if (section === "#paragraph") {
+          return (
+            <React.Fragment key={`paragraph-${index}`}>
+              <p className="description">{content}</p>
+              <br />
+            </React.Fragment>
+          );
+        }
+
         return null;
       })}
-    </div>
+    </blockquote>
   );
 }
 

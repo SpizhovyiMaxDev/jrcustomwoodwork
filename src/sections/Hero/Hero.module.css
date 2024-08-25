@@ -20,8 +20,8 @@
 /* - - - - Hero Link - - - -  */
 /* ----------------------------------------------- */
 
-.heroLink:link,
-.heroLink:visited{
+.collectionLink:link,
+.collectionLink:visited{
     color: var(--color-taupe);
 }
 

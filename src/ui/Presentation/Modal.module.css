@@ -30,8 +30,8 @@
     display: flex;
     color: var(--color-white);
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 2.4rem;
+    right: 3.2rem;
     background: none;
     border: none;
 }

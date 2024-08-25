@@ -3,15 +3,15 @@ import { createContext, useContext, useState } from "react";
 const PresentationContext = createContext();
 
 function PresentationProvider({
-  customStyles = "",
-  imgsSrcSets = [],
-  mediaSizes = [],
+  wrapperStyles = "",
+  imgsSrcSet = [],
+  mediaQueries = [],
   children,
 }) {
   const [isModalOpen, setModalState] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalImages = imgsSrcSets.length;
-  const isLastSlide = currentSlide === imgsSrcSets.length - 1;
+  const totalImages = imgsSrcSet.length;
+  const isLastSlide = currentSlide === imgsSrcSet.length - 1;
   const isFirstSlide = currentSlide === 0;
   const nextSlide = () =>
     setCurrentSlide((slide) => (!isLastSlide ? slide + 1 : slide));
@@ -32,9 +32,9 @@ function PresentationProvider({
         prevSlide,
         nextSlide,
         totalImages,
-        imgsSrcSets,
-        mediaSizes,
-        customStyles,
+        imgsSrcSet,
+        mediaQueries,
+        wrapperStyles,
       }}
     >
       {children}

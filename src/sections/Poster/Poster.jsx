@@ -14,7 +14,7 @@ function Poster() {
           "/imgs/sections/poster/poster-2000.webp",
           "/imgs/sections/poster/poster-2400.webp",
         ]}
-        mediaSizes={[
+        mediaQueries={[
           "(max-width: 480px)",
           "(max-width: 768px)",
           "(max-width: 1200px)",

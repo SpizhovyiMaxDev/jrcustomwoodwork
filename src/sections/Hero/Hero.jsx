@@ -17,19 +17,19 @@ function Hero() {
               "/imgs/sections/hero/hero-1200.webp",
               "/imgs/sections/hero/hero-1400.webp",
             ]}
-            mediaSizes={[
+            mediaQueries={[
               "(max-width: 480px)",
               "(max-width: 768px)",
               "(max-width: 1200px)",
               "(max-width:1400px)",
             ]}
-            alt="Modern kitchen projects"
             wrapperStyles={`mb-2 rounded--11 ${styles.aspectRatio}`}
+            alt="Modern kitchen projects"
           />
 
           <Heading type="tertiary">
             Collection 01 -&nbsp;
-            <Link to="/categories/kitchens" className={styles.heroLink}>
+            <Link to="/categories/kitchens" className={styles.collectionLink}>
               Kitchens
             </Link>
           </Heading>

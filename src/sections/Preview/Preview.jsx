@@ -20,7 +20,7 @@ function Preview() {
             "/imgs/sections/preview/preview-1600.webp",
             "/imgs/sections/preview/preview-1920.webp",
           ]}
-          mediaSizes={[
+          mediaQueries={[
             "(max-width: 480px)",
             "(max-width: 768px)",
             "(max-width: 1200px)",

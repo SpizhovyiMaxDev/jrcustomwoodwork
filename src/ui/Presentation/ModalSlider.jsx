@@ -4,14 +4,14 @@ import Modal from "./Modal";
 
 function ModalSlider() {
   const {
-    imgsSrcSets,
+    mediaQueries,
+    imgsSrcSet,
     currentSlide,
     nextSlide,
     prevSlide,
     totalImages,
     isFirstSlide,
     isLastSlide,
-    mediaSizes,
     isModalOpen,
     closeModal,
   } = usePresentation();
@@ -19,7 +19,7 @@ function ModalSlider() {
   return (
     <Modal isModalOpen={isModalOpen} closeModal={closeModal}>
       <div className={styles.slider}>
-        {imgsSrcSets.map((srcSets, index) => (
+        {imgsSrcSet.map((srcSets, index) => (
           <div
             className={`${styles.sliderItem}`}
             style={{
@@ -32,7 +32,7 @@ function ModalSlider() {
               {srcSets.map((srcSet, index) => {
                 return (
                   <source
-                    media={mediaSizes.at(index)}
+                    media={mediaQueries.at(index)}
                     srcSet={srcSet}
                     key={`srcSet-${index}`}
                   ></source>

@@ -15,7 +15,7 @@ function Intro() {
               "/imgs/sections/history/intro-1200.webp",
               "/imgs/sections/history/intro-1400.webp",
             ]}
-            mediaSizes={[
+            mediaQueries={[
               "(max-width: 425px)",
               "(max-width: 768px)",
               "(max-width: 1200px)",

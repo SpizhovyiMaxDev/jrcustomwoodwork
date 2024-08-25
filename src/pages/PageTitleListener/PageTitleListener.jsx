@@ -1,6 +1,8 @@
 import { useLocation } from "react-router";
 import { useEffect } from "react";
 
+import { capitalizeFirstLetter } from "../../utils/helpers";
+
 function PageTitleListener({ children }) {
   const { pathname } = useLocation();
 
@@ -27,7 +29,7 @@ function getPageTitle(pathname) {
   }
 
   if (pathParts.length > 2) {
-    return formatProjectTitle(pathParts.at(-1));
+    return formatTitle(formatProjectTitle(pathParts.at(-1)));
   }
 
   return formatTitle(formatPageTitle(pathname));
@@ -50,11 +52,7 @@ function formatProjectTitle(projectTitle) {
   const formattedParts = titleParts.map((part, index) =>
     index === titleParts.length - 1 ? `#${part}` : capitalizeFirstLetter(part)
   );
-  return formatTitle(formattedParts.join(" ").trim());
-}
-
-function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  return formattedParts.join(" ").trim();
 }
 
 export default PageTitleListener;

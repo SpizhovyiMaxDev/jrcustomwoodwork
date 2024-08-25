@@ -3,21 +3,21 @@ import { usePresentation } from "../../contexts/PresentationProvider";
 
 function Slider() {
   const {
-    imgsSrcSets,
+    mediaQueries,
+    imgsSrcSet,
     isFirstSlide,
     isLastSlide,
     openModal,
     currentSlide,
-    mediaSizes,
     prevSlide,
     nextSlide,
-    customStyles,
+    wrapperStyles,
     totalImages,
   } = usePresentation();
 
   return (
-    <div className={`${styles.slider} ${customStyles}`}>
-      {imgsSrcSets.map((srcSets, index) => (
+    <div className={`${styles.slider} ${wrapperStyles}`}>
+      {imgsSrcSet.map((srcSets, index) => (
         <div
           key={`sliderItem-${index}`}
           className={styles.sliderItem}
@@ -30,7 +30,7 @@ function Slider() {
             {srcSets.map((srcSet, index) => {
               return (
                 <source
-                  media={mediaSizes.at(index)}
+                  media={mediaQueries.at(index)}
                   srcSet={srcSet}
                   key={`srcSet-${index}`}
                 ></source>

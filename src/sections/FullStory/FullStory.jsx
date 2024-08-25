@@ -35,14 +35,14 @@ function FullStory() {
               "/imgs/sections/history/fireplace-1200.webp",
               "/imgs/sections/history/fireplace-1400.webp",
             ]}
-            mediaSizes={[
+            mediaQueries={[
               "(max-width: 480px)",
               "(max-width: 768px)",
               "(max-width: 1200px)",
               "(max-width: 1400px)",
             ]}
-            alt="Story of J&R Custom Woodwork LDT"
             wrapperStyles={`${styles.aspectRatio} ${styles.fullStoryPicture}`}
+            alt="Story of J&R Custom Woodwork LDT"
           />
 
           <Picture
@@ -52,14 +52,14 @@ function FullStory() {
               "/imgs/sections/history/philosophy-1200.webp",
               "/imgs/sections/history/philosophy-1400.webp",
             ]}
-            mediaSizes={[
+            mediaQueries={[
               "(max-width: 480xpx)",
               "(max-width: 768px)",
               "(max-width: 1200px)",
               "(max-width: 1400px)",
             ]}
-            alt="Philosophy of J&R Custom Woodwork LDT"
             wrapperStyles={`${styles.aspectRatio} ${styles.fullStoryPicture}`}
+            alt="Philosophy of J&R Custom Woodwork LDT"
           />
 
           <div>

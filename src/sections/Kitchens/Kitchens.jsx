@@ -28,7 +28,7 @@ function Kitchens() {
               "/imgs/sections/kitchens/kitchens-1400.webp",
               "/imgs/sections/kitchens/kitchens-1600.webp",
             ]}
-            mediaSizes={[
+            mediaQueries={[
               "(max-width: 480px)",
               "(max-width: 768px)",
               "(max-width: 1200px)",

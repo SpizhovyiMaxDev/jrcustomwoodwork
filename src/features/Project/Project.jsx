@@ -1,8 +1,8 @@
 import styles from "./Project.module.css";
 
-import { useParams } from "react-router";
 import { projects } from "../../data/projects";
-import { generateMedias, generateSrcSet } from "../../utils/helpers";
+import { useParams } from "react-router";
+import { createMediaQueries, generateImgsSrcSet } from "../../utils/helpers";
 
 import Heading from "../../ui/Heading/Heading";
 import Breadcrumbs from "./Breadcrumbs";
@@ -16,18 +16,6 @@ function Project() {
   const project = projects[categoryType]?.find(
     (project) => project.id === projectId
   );
-  const mediaSizes = project ? generateMedias(project.imgs.sizes) : [];
-  const imgsSrcSets = project
-    ? Array.from({ length: project.imgs.amount }, (_, i) => {
-        const imageIndex = i + 1;
-        return generateSrcSet(
-          project.category,
-          project.id,
-          imageIndex,
-          project.imgs.sizes
-        );
-      })
-    : [];
 
   if (!categoryExists || !project) {
     const errorMessage = !categoryExists
@@ -43,15 +31,23 @@ function Project() {
     );
   }
 
+  const mediaQueries = createMediaQueries(project.imgs.sizes);
+  const imgsSrcSet = generateImgsSrcSet(
+    project.category,
+    project.id,
+    project.imgs.amount,
+    project.imgs.sizes
+  );
+
   return (
     <div className={styles.project}>
       <div className="container">
         <Breadcrumbs category={project.category} />
 
         <Presentation
-          customStyles={`${styles.aspectRatio} mb-3`}
-          imgsSrcSets={imgsSrcSets}
-          mediaSizes={mediaSizes}
+          wrapperStyles={`${styles.aspectRatio} mb-3`}
+          imgsSrcSet={imgsSrcSet}
+          mediaQueries={mediaQueries}
         />
 
         <Heading type="secondary" className="mb-2">

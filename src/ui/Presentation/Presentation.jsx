@@ -2,12 +2,16 @@ import { PresentationProvider } from "../../contexts/PresentationProvider";
 import ModalSlider from "./ModalSlider";
 import Slider from "./Slider";
 
-function Presentation({ imgsSrcSets, mediaSizes, customStyles }) {
+function Presentation({
+  imgsSrcSet = [],
+  mediaQueries = [],
+  wrapperStyles = "",
+}) {
   return (
     <PresentationProvider
-      imgsSrcSets={imgsSrcSets}
-      mediaSizes={mediaSizes}
-      customStyles={customStyles}
+      imgsSrcSet={imgsSrcSet}
+      mediaQueries={mediaQueries}
+      wrapperStyles={wrapperStyles}
     >
       <Slider />
       <ModalSlider />

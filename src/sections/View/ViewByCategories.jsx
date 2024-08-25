@@ -1,8 +1,7 @@
 import styles from "./ViewByCategories.module.css";
 
 import Heading from "../../ui/Heading/Heading";
-import ButtonLink from "../../ui/ButtonLink/ButtonLink";
-import Picture from "../../ui/Picture/Picture";
+import ViewCategoryItem from "./ViewCategoryItem";
 
 function ViewByCategories() {
   return (
@@ -15,51 +14,29 @@ function ViewByCategories() {
 
       <div className="container">
         <div className={styles.categoriesViewContainer}>
-          <div className={styles.categoriesViewItem}>
-            <Picture
-              srcSet={[
-                "/imgs/sections/view/wardrobes/480/kelowna-custom-wardrobe-cabinets-1.webp",
-                "/imgs/sections/view/wardrobes/768/kelowna-custom-wardrobe-cabinets-1.webp",
-                "/imgs/sections/view/wardrobes/1200/kelowna-custom-wardrobe-cabinets-1.webp",
-              ]}
-              mediaSizes={["(max-width: 480px)", "(max-width:768px)"]}
-              wrapperStyles={`mb-2  ${styles.squareAspectRatio}`}
-              alt="Kelowna custom wardrobes"
-            />
+          <ViewCategoryItem
+            imageSrcSet={[
+              "/imgs/sections/view/wardrobes/480/kelowna-custom-wardrobe-cabinets-1.webp",
+              "/imgs/sections/view/wardrobes/768/kelowna-custom-wardrobe-cabinets-1.webp",
+            ]}
+            mediaQueries={["(max-width: 480px)", "(max-width:768px)"]}
+            typeOfRatio="square"
+            alt="Kelowna custom wardrobes"
+            category="Wardrobes"
+            linkPath="/categories/wardrobes"
+          />
 
-            <Heading type="tertiary" className="mb-1">
-              Wardrobes
-            </Heading>
-
-            <ButtonLink type="primary" path="/categories/wardrobes">
-              View Wardrobes
-            </ButtonLink>
-          </div>
-
-          <div className={styles.categoriesViewItem}>
-            <Picture
-              srcSet={[
-                "/imgs/sections/view/bathrooms/480/kelowna-custom-bathroom-title-1.webp",
-                "/imgs/sections/view/bathrooms/768/kelowna-custom-bathroom-title-1.webp",
-                "/imgs/sections/view/bathrooms/1200/kelowna-custom-bathroom-title-1.webp",
-              ]}
-              mediaSizes={[
-                "(max-width:480px)",
-                "(max-width:768px)",
-                "(max-width:1200px)",
-              ]}
-              wrapperStyles={`mb-2 ${styles.portraitAspectRatio}`}
-              alt="Kelowna custom bathrooms"
-            />
-
-            <Heading type="tertiary" className="mb-1">
-              Bathrooms
-            </Heading>
-
-            <ButtonLink type="primary" path="/categories/bathrooms">
-              View Bathrooms
-            </ButtonLink>
-          </div>
+          <ViewCategoryItem
+            imageSrcSet={[
+              "/imgs/sections/view/bathrooms/480/kelowna-custom-bathroom-title-1.webp",
+              "/imgs/sections/view/bathrooms/768/kelowna-custom-bathroom-title-1.webp",
+            ]}
+            mediaQueries={["(max-width: 480px)", "(max-width:768px)"]}
+            typeOfRatio="portrait"
+            alt="Kelowna custom bathrooms"
+            category="Bathrooms"
+            linkPath="/categories/bathrooms"
+          />
         </div>
       </div>
     </section>

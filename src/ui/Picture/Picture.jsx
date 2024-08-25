@@ -3,7 +3,7 @@ import styles from "./Picture.module.css";
 function Picture({
   src = "",
   srcSet = [],
-  mediaSizes = [],
+  mediaQueries = [],
   openModal = null,
   wrapperStyles = "",
   alt = "",
@@ -17,7 +17,7 @@ function Picture({
         return (
           <source
             srcSet={srcSet}
-            media={mediaSizes[index]}
+            media={mediaQueries[index]}
             key={index}
           ></source>
         );

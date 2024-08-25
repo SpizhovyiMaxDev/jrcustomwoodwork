@@ -1,7 +1,7 @@
 import styles from "./Modal.module.css";
 import useKey from "../../hooks/useKey";
 
-function Modal({ isModalOpen, closeModal, children }) {
+function Modal({ isModalOpen = false, closeModal = null, children }) {
   useKey("Escape", closeModal);
 
   return (

@@ -1,6 +1,7 @@
 import styles from "./Breadcrumbs.module.css";
 
 import ButtonLink from "../../ui/ButtonLink/ButtonLink";
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Breadcrumbs({ category }) {
   return (
@@ -10,7 +11,7 @@ function Breadcrumbs({ category }) {
       </ButtonLink>
       <span>/</span>
       <ButtonLink path={`/categories/${category}`} type="tertiary">
-        {category[0].toUpperCase() + category.slice(1)}
+        {capitalizeFirstLetter(category)}
       </ButtonLink>
     </div>
   );
