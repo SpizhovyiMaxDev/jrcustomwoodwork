@@ -44,7 +44,7 @@ function Footer() {
               aria-label="Developer of the website"
               className={styles.footerLink}
             >
-              Max Spizhovyi
+              maxweb.studio
             </a>
           </p>
         </div>
