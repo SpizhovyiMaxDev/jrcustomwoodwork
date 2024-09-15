@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://jrcustomwoodwork.ca/home</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/hero/hero-480.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/hero/hero-768.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/hero/hero-1200.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/hero/hero-1400.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://jrcustomwoodwork.ca/about</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://jrcustomwoodwork.ca/contact</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Categories and Dynamic Pages -->
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/kitchens</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/kitchens/kelowna-custom-kitchen-cabinets-1</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/kitchens/kelowna-custom-kitchen-cabinets-2</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/kitchens/kelowna-custom-kitchen-cabinets-3</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/kitchens/kelowna-custom-kitchen-cabinets-4</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/wardrobes</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/wardrobes/kelowna-custom-wardrobe-cabinets-1</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/bathrooms</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/bathrooms/kelowna-custom-bathrooms-cabinets-1</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/bar</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/bar/kelowna-custom-bar-cabinets-1</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/bar/kelowna-custom-bar-cabinets-2</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/fireplace</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/fireplace/kelowna-custom-fireplace-1</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://jrcustomwoodwork.ca/categories/fireplace/kelowna-custom-fireplace-2</loc>
+    <lastmod>2024-09-14</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Images for History Section -->
+  <url>
+    <loc>https://jrcustomwoodwork.ca/history</loc>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/fireplace-480.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/fireplace-768.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/fireplace-1200.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/fireplace-1400.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/intro-480.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/intro-768.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/intro-1200.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/intro-1400.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/philosophy-480.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/philosophy-768.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/philosophy-1200.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/history/philosophy-1400.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Images for Kitchens Section -->
+  <url>
+    <loc>https://jrcustomwoodwork.ca/kitchens</loc>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/kitchens/kitchens-480.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/kitchens/kitchens-768.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/kitchens/kitchens-1200.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/kitchens/kitchens-1400.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/kitchens/kitchens-1600.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Images for Poster Section -->
+  <url>
+    <loc>https://jrcustomwoodwork.ca/poster</loc>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/poster/poster-480.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/poster/poster-768.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/poster/poster-1200.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/poster/poster-1400.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/poster/poster-1600.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/poster/poster-2000.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/poster/poster-2400.webp</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Images for Preview Section -->
+  <url>
+    <loc>https://jrcustomwoodwork.ca/preview</loc>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/preview/preview-480.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/preview/preview-768.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/preview/preview-1200.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/preview/preview-1400.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/preview/preview-1600.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://jrcustomwoodwork.ca/imgs/sections/preview/preview-1920.webp</image:loc>
+    </image:image>
+  </url>
+
+</urlset>
