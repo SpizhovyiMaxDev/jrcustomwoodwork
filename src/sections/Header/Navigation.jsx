@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { navigation } from "../../data/navigation";
 
 function Navigation({ navOpen, setOpenNav }) {
-  function handleDeferCloseNav() {
+  function deferCloseNav() {
     setTimeout(() => setOpenNav((open) => !open), 320);
   }
 
@@ -16,7 +16,7 @@ function Navigation({ navOpen, setOpenNav }) {
     >
       <ul className={styles.mainNavList}>
         {navigation.map((link) => (
-          <li key={link.id} onClick={handleDeferCloseNav}>
+          <li key={link.id} onClick={deferCloseNav}>
             <NavLink to={link.path} className={styles.mainNavLink}>
               {link.linkName}
             </NavLink>

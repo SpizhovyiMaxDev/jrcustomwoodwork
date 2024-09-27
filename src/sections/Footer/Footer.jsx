@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+
 import Heading from "../../ui/Heading/Heading";
 
 function Footer() {
@@ -14,7 +15,7 @@ function Footer() {
             Follow us on
             <a
               target="_blank"
-              href=" https://www.instagram.com/reshetov.igor.9/?igsh=MTZuMzRkanpuejdxbg%3D%3D"
+              href=" https://www.instagram.com/_jrcustomwoodwork_ltd?igsh=MzFiOW84c3h4ZXZu&utm_source=qr"
               rel="noreferrer"
               aria-label="Instagram page"
               className={styles.footerLink}
